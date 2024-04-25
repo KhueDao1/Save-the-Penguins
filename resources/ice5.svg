@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 930 472">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="465.99" y1="539.25" x2="458.89" y2="55.16" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".09" stop-color="#f7fafd"/>
+      <stop offset=".22" stop-color="#e3eff7"/>
+      <stop offset=".37" stop-color="#c2ddef"/>
+      <stop offset=".55" stop-color="#94c3e2"/>
+      <stop offset=".74" stop-color="#58a2d3"/>
+      <stop offset=".95" stop-color="#127bc0"/>
+      <stop offset="1" stop-color="#0071bc"/>
+    </linearGradient>
+  </defs>
+  <g id="Stain">
+    <polygon class="cls-1" points="930 472 858 252 624 270 552 0 183 72 126.72 219.01 41.89 242.85 0 472 930 472"/>
+  </g>
+</svg>

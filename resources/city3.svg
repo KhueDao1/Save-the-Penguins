@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 374 1570">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #2e3192;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: #0071bc;
+      }
+
+      .cls-3 {
+        fill: #f2f2f2;
+      }
+
+      .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath);
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-4" x="122.66" y="82.12" width="228.49" height="1487.88"/>
+    </clipPath>
+  </defs>
+  <g id="Stain">
+    <g>
+      <rect class="cls-1" y="30.31" width="82.98" height="1539.69" transform="translate(82.98 1600.31) rotate(180)"/>
+      <rect class="cls-1" x="61.33" width="173.17" height="35.19" transform="translate(295.83 35.19) rotate(180)"/>
+      <rect class="cls-2" x="81.77" y="30.31" width="292.22" height="1539.69" transform="translate(455.77 1600.31) rotate(180)"/>
+      <g class="cls-5">
+        <g>
+          <g id="_Grid_Repeat_" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="1504.5" width="292.22" height="23.46" transform="translate(410.08 3032.47) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-2" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="1409.68" width="292.22" height="23.46" transform="translate(410.08 2842.81) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-3" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="1314.85" width="292.22" height="23.46" transform="translate(410.08 2653.16) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-4" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="1220.02" width="292.22" height="23.46" transform="translate(410.08 2463.51) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-5" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="1125.2" width="292.22" height="23.46" transform="translate(410.08 2273.86) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-6" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="1030.37" width="292.22" height="23.46" transform="translate(410.08 2084.21) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-7" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="935.55" width="292.22" height="23.46" transform="translate(410.08 1894.56) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-8" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="840.72" width="292.22" height="23.46" transform="translate(410.08 1704.91) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-9" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="745.9" width="292.22" height="23.46" transform="translate(410.08 1515.26) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-10" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="651.07" width="292.22" height="23.46" transform="translate(410.08 1325.6) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-11" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="556.25" width="292.22" height="23.46" transform="translate(410.08 1135.95) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-12" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="461.42" width="292.22" height="23.46" transform="translate(410.08 946.3) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-13" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="366.59" width="292.22" height="23.46" transform="translate(410.08 756.65) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-14" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="271.77" width="292.22" height="23.46" transform="translate(410.08 567) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-15" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="176.94" width="292.22" height="23.46" transform="translate(410.08 377.35) rotate(180)"/>
+          </g>
+          <g id="_Grid_Repeat_-16" data-name="&amp;lt;Grid Repeat&amp;gt;">
+            <rect class="cls-3" x="58.93" y="82.12" width="292.22" height="23.46" transform="translate(410.08 187.7) rotate(180)"/>
+          </g>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

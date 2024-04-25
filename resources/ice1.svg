@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1959 1723">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: url(#linear-gradient-3);
+      }
+
+      .cls-4 {
+        fill: url(#linear-gradient-4);
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="-193.15" y1="1402.72" x2="535.89" y2="917.83" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset=".09" stop-color="#f7fafd"/>
+      <stop offset=".22" stop-color="#e3eff7"/>
+      <stop offset=".37" stop-color="#c2ddef"/>
+      <stop offset=".55" stop-color="#94c3e2"/>
+      <stop offset=".74" stop-color="#58a2d3"/>
+      <stop offset=".95" stop-color="#127bc0"/>
+      <stop offset="1" stop-color="#0071bc"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="1494.99" y1="1790.25" x2="1487.89" y2="1306.16" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="483.62" y1="1784.75" x2="715.62" y2="1070.08" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-4" x1="186.25" y1="1803.86" x2="399.58" y2="1155.86" xlink:href="#linear-gradient"/>
+  </defs>
+  <g id="Stain">
+    <g>
+      <polygon class="cls-1" points="0 1723 0 595.6 50.35 526.19 90.62 406.07 231.59 342 292 606.28 362.49 758.44 422.9 1319.02 540 1723 0 1723"/>
+      <polygon class="cls-2" points="1959 1723 1887 1503 1653 1521 1581 1251 1212 1323 1155.72 1470.01 1070.89 1493.85 1029 1723 1959 1723"/>
+      <polygon class="cls-3" points="32 1723 72 819 153 720 171 441 216 396 252 0 369 63 567 576 603 585 729 1134 792 1143 855 1233 918 1233 1026 1539 1242 1575 1314.67 1723 32 1723"/>
+      <polygon class="cls-4" points="0 1723 0 1102.56 58.74 1064.37 105.73 998.26 270.19 963 340.67 1108.44 422.9 1192.18 493.38 1500.68 630 1723 0 1723"/>
+    </g>
+  </g>
+</svg>

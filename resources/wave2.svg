@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1262 2067.16">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+        stroke-width: 0px;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="1237.96" y1="2027.47" x2="824.63" y2="1360.81" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#0071bc"/>
+    </linearGradient>
+  </defs>
+  <g id="Stain">
+    <path class="cls-1" d="M0,1832.5s120.93-290.67,314.04-218.67c495.24,184.65,438.87-531,184.33-396-11.03,5.85,109.16-245.53,342.32-126,333.54,171,70.22-954-236.99-828C805.57-123.17,1262,29.83,1262,29.83v2025L0,2067.16v-234.67Z"/>
+  </g>
+</svg>
