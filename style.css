@@ -1,25 +1,47 @@
 :root{
     --bg: #00000 ;
-    --water: #007FFF;
+    --water: #0071bc;
     --section: lightBlue;
     --blue:midnightBlue;
+    --orange: rgb(255, 138, 96);
     font-family: arial;
   }
-  img{
-    object-fit: contain;
+  *{
+    box-sizing:border-box;
+  }
+  
+  img,video{
+    position: relative;
+    height:auto;
+    width:100%;
+    object-fit: cover;
   }
   body{
     min-height:100vh;
     margin:0;
     max-height:100vh;
     overflow:scroll;
-    scroll: smooth;
+    scroll-behavior: smooth;
     background-color:var(--bg);
+    display: grid;
   }
-  *{
-    box-sizing:border-box;
+  body > section{
+    scroll-margin-top: 2vh;
+    scroll-snap-align: start;
+    scroll-snap-type: proximity;
   }
-  
+  h1{
+    padding: 0 4vw;
+    z-index: 5;
+    font-family: "montserrat", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 5vh;
+    color: var(--blue);
+    place-self: center;
+  }
+
+
+
+  /*the flip book*/
   /* .centered{
     margin:auto;
     width:max-content;
@@ -126,7 +148,8 @@
   
   
   body[onload]{
-    /*Cheesing the preview*//*
+    /*Cheesing the preview*/
+    /*
     transform:scale(1.5);
     transform-origin:center top;
     .leaf:nth-child(1){
@@ -148,29 +171,12 @@
   }
    */
 
-  .water{
-    z-index: 3;
-    opacity: 0.4;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    height: 0vh;
-    background-color:var(--water);
-    animation: rise 3s linear ;
-    animation-timeline: scroll();
-  }
-  @keyframes rise {
-    0%{
-      height: 0vh;
-    }  
-    100%{
-      height: 80vh;
-    }
-  }
+   /*rising water level overlay*/
   
+  /*top progress bar*/
   .progress {
-    z-index: 3;
-    height: 10px;
+    z-index: 10;
+    height: 1vh;
     width: 0%;
     background-color: var(--water);
     position: fixed;
@@ -185,28 +191,140 @@
       width: 100%;
     }
   }
-  
+  .logo{
+    z-index:3;
+    width: 12vw;
+    object-fit: cover;
+  }
+  .nav{
+    padding: 0 28px;
+    box-shadow:   var(--section) 0 2px 20px 2px;
+    position:-webkit-sticky;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    column-gap: 2em;
+    z-index:2;
+    height: fit-content;
+    background-color:var(--blue);
+    font-size: max(1.6vw, 12px);
+    color: white;
+  }
+  .link{
+    display: flex;
+    column-gap: 2em;
+  }
+  .nav h2{
+    position: relative;
+    padding-top: 1.5vh;    
+    font-size: 2vh;
+  }
+
+
+  .upper,.lower{
+    z-index: 3;
+    background-color: white;
+    height: 4vh;
+    color: var(--blue);
+    font-size: 16px;
+    justify-content: flex-end;
+    align-items:center;
+  }
+  .lower p{
+    position:absolute;
+    right: -400px;
+    animation: run 8s infinte alternate both;
+  }
+  @keyframes run{
+    to{
+      transform: translateX(400px);
+    }
+  }
+
+
+  /*content*/
   section{
     width: 100vw;
-    height: 60vw;
-    background-color: var(--section);
+    height: fit-content;
+    background-color: var(--bg);
+    overflow-y:scroll;
+    overflow-x: hidden;
+    position: relative;
+    scrollbar-width: none;
+  }
+  .overlayText{
+    cursor: all-scroll;
+    position: absolute;
+    margin: 0 24px;
+    z-index: 8;
+    top: 1%;
+    color: var(--section);
+    font-size: 6vw;
+    font-weight: 900;
+    mix-blend-mode: overlay;
+    animation: down 3s alternate ease-in ;
+    animation-timeline: scroll();
+  }
+  @keyframes down{
+    0%{
+      top: 1%;
+    }
+    100%{
+      bottom: -20%;
+    }
   }
   
-  .nav{
-    z-index:2;
-    position: fixed;
-    height: 80px;
-    background-color:var(--blue);
+  .data,.game, .ctx{
+    background-color: var(--bg);
+    width:100vw;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;    
+    scrollbar-width: none;
   }
-.active {
-    right: 0;
-   }
-
-
-
+  .box{
+    z-index:1;
+    width: 100vw;
+    height: 20vh;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .block{
+    z-index:1;
+    text-wrap:pretty;
+    background-color: var(--orange);
+    color: var(--blue);
+    width: 100vw;
+    padding: 4vh;
+  }
+  .block h2{
+    font-size: max(3vh, 2.4vw);
+  }
+  .border{
+    z-index: 2;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+    width: 20%;
+  }
+  
 .overlay{
     position: fixed;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
     height: 30vh;
+}
+.penguin{
+  position: absolute;
+  width: 2vw;
+  right: 24px;
+  top: 0;
+  animation: shrink 3s linear ;
+  animation-timeline: scroll();
 }
 .glacier{
     z-index: -3;
@@ -216,23 +334,7 @@
     width: 40vw;
     height: 80vh;
 }
-.sea{
-    z-index:3;
-    color: cornflowerblue;
-    position: absolute;
-    bottom:0;
-    width: 40vw;
-    height: 80vh;
-}
 
-@keyframes spin{
-    0%{ 
-        transform: rotate(0);
-    }
-    100%{
-        transform: rotate(120deg);
-    }
-}
 
 .draggable:hover{
     cursor: grab;
@@ -254,3 +356,52 @@ button:hover {
     border-radius: 2rem;
 }
 
+.water{
+    z-index: 3;
+    mix-blend-mode: multiply;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 0vh;
+    background-color:var(--water);
+    background: linear-gradient(0deg, orangeRed 0%, lightBlue 50%,#f7fafd 90%, white 100%);
+    animation: rise 3s 5s linear ;
+    animation-timeline: scroll();
+    /*
+    offset starting point
+    scroll lib
+    */
+  }
+  @keyframes rise {
+    0%{
+      height: 0vh;
+    } 
+    100%{
+      height: 90vh;
+    }
+  }
+  
+  .ice{
+    position: relative;
+    width: 10svh;
+    transform: scaleX(-1);
+    transform-origin: 40%;
+    float: right;
+    top: -1svh;
+    animation: shrink 3s linear ;
+    animation-timeline: scroll();
+  }
+  @keyframes shrink {
+    0%{
+      scale: 6;
+    }  
+    50%{
+      scale: 8;
+    }  
+    80%{
+      scale: 6;
+    }  
+    100%{
+      scale: 1;
+    }
+  }
