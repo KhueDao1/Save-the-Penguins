@@ -140,7 +140,7 @@
   .data,.game, .ctx{
     background-color: var(--section);
     width:100vw;
-    height: 60vh;
+    height: fit-content;
     position: relative;
     display: flex;
     flex-flow: row wrap;
@@ -185,7 +185,8 @@
   place-content: center;
 }
 .arrange{
-  height: 60vh;
+  height: 100vh;
+  width: 100vw;
 }
 .dark{
   background-color: black;
