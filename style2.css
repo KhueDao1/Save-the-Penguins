@@ -169,12 +169,23 @@
   box-shadow: var(--section) 0 0 18px 18px;
   transition: 2s ease-in;
   }
+  .draggable{
+    position: absolute;
+    bottom: 0;
+    width: 40%;
+  }
   .draggable:hover{
     cursor: grab;
 }
-
+ 
 .game{
-  background-color: var(--orange);
+  background-color: var(--orange);  
+  padding: 8vh 0;
+  display: grid;
+  place-content: center;
+}
+.arrange{
+  height: 60vh;
 }
 .dark{
   background-color: black;

@@ -1,14 +1,4 @@
-$(".").click(function(){
-    $(".").toggleClass("");
-  });
 
-$( function() {
-    $( ".draggable" ).draggable({
-      containment: ".container"
-    });
-  } );
-
-  
 
 // the percentage of the page scrolled
 window.addEventListener('scroll', () => {
@@ -27,3 +17,10 @@ $( function () {
   $(".draggable").draggable({ snap:true});
   $(".draggable").draggable({ containment:"parent"});
 });
+
+$( function() {
+  $( "#resizable" ).resizable({
+    animate: true,
+    containment: "#container"
+  });
+} );
