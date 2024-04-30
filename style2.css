@@ -18,6 +18,9 @@
     color:var(--orange);
     font-weight: 100;
   }
+  a:active{
+    color: var(--section);
+  }
   img,video{
     position: relative;
     height:auto;
@@ -152,6 +155,12 @@
     aspect-ratio: 3 / 1;
     overflow-y: scroll;
     scrollbar-width: none;
+  }
+  .light{
+  height: 10vh;
+  aspect-ratio: 1 / 1 ;
+  background-image: url(resources/snowflake.svg);
+  background-color: aliceblue;
   }
   .draggable:hover{
     cursor: grab;

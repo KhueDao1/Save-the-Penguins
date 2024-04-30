@@ -125,6 +125,15 @@
     position: relative;
     scrollbar-width: none;
   }
+  .footer{
+    display:flex;
+    flex-flow: column wrap;
+    align-items: end;
+    padding: 2vh 4vh 0;
+  }
+  .footer h2{
+    margin: 0 ;
+  }
   .overlayText{
     position: absolute;
     margin: 24px;
@@ -311,17 +320,26 @@
 }
 
 button {
-    padding: 6px;
-    background-color: mediumturquoise;
-    color: black;
-    font-weight: 800;
-    font-size: 3vh;
-    width: fit-content;
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  padding: 6px;
+  text-decoration: none;  
+  background-color: var(--blue);
+  color: white;
+  font-weight: 800;
+  font-size: 3vh;
+  width: fit-content;
+  opacity: 0;
+  animation: appear 3s 5s linear ;
+  animation-timeline: scroll();
 }
 button:hover {
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: var(--orange);
     font-weight: 800;
-    text-decoration: none;
     border-radius: 2rem;
+    border: 0;
+    box-shadow: 2px 2px 12px 5px var(--section);
+    cursor: alias;
 }
