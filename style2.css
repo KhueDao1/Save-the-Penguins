@@ -148,6 +148,10 @@
     justify-content: center;    
     scrollbar-width: none;
   }
+ 
+  .click1:hover{
+    cursor: pointer;
+  }
   .box{
     position: relative;
     z-index:1;
@@ -157,14 +161,24 @@
     scrollbar-width: none;
   }
   .light{
-  height: 10vh;
+  width: max(30vw, 30vh);
   aspect-ratio: 1 / 1 ;
   background-image: url(resources/snowflake.svg);
-  background-color: aliceblue;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: var(--section) 0 0 18px 18px;
   }
   .draggable:hover{
     cursor: grab;
 }
 
-
-  
+.game{
+  background-color: var(--orange);
+}
+.dark{
+  background-color: black;
+}
+.dial{
+  rotate: 120deg;
+  width: max(40vw, 40vh);
+}
