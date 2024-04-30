@@ -149,7 +149,7 @@
     scrollbar-width: none;
   }
  
-  .click1:hover{
+  .click1:hover, .click2:hover{
     cursor: pointer;
   }
   .box{
@@ -167,6 +167,7 @@
   background-color: white;
   border-radius: 50%;
   box-shadow: var(--section) 0 0 18px 18px;
+  transition: 2s ease-in;
   }
   .draggable:hover{
     cursor: grab;
@@ -181,4 +182,8 @@
 .dial{
   rotate: 120deg;
   width: max(40vw, 40vh);
+  transition: 2s ease-in;
+}
+.rotate{
+  rotate: 0;
 }

@@ -19,3 +19,11 @@ window.addEventListener('scroll', () => {
 $(".click1").click(function(){
   $(".light").toggleClass("dark");
 });
+$(".click2").click(function(){
+  $(".dial").toggleClass("rotate");
+});
+
+$( function () {
+  $(".draggable").draggable({ snap:true});
+  $(".draggable").draggable({ containment:"parent"});
+});
