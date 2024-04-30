@@ -9,7 +9,15 @@
   *{
     box-sizing:border-box;
   }
-  
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    cursor: alias;
+    color:var(--orange);
+    font-weight: 100;
+  }
   img,video{
     position: relative;
     height:auto;
@@ -34,146 +42,17 @@
     padding: 0 4vw;
     z-index: 5;
     font-family: "montserrat", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 5vh;
+    font-size: min(8vh, 8vw);
     color: var(--blue);
     place-self: center;
   }
   p{
-    padding: 0 4vw;
+    padding: 0 1vw;
+    font-size: min(3vw, 18px);
+    justify-self: start;
   }
 
 
-  /*the flip book*/
-  /* .centered{
-    margin:auto;
-    width:max-content;
-  }
-  .flipbook{
-    margin:3em auto;
-    width:max(40vw,28vh);
-    height:max(30vw,21vh);
-    position:relative;
-    transform-style: preserve-3d;
-    perspective:1000px;
-    .leaf{
-      position:absolute;
-      transform-style: preserve-3d;
-      height:100%;
-      width:50%;
-      background-color:#fff;
-      left:50%;
-      transition:transform 1s;
-      transform:rotate3d(0 ,1 , 0, 0deg);
-      transform-origin:left 0px;
-      //border:1px solid #000;
-      .page{
-        transform-style: preserve-3d;
-        position:absolute;
-        width:100%;
-        height:100%;
-        top:0;
-        &.front{
-          transform:rotate3d(0 ,1 , 0, 0deg) translate3d(0,0,0.1px);
-          &:not(.external){
-            box-shadow: inset 5px 0px 5px -5px #0005;
-          }
-            
-        }
-        &.back{
-          transform:rotate3d(0 ,1 , 0, 180deg) translate3d(0,0,0.1px);
-          &:not(.external){
-            box-shadow: inset -5px 0px 5px -5px #0005;
-          }
-        } 
-      }
-      &.turned{
-        
-        //transform:rotatey(180deg);
-      }
-    }
-  }
-  .disabled{
-    user-select:none;
-    opacity:0.6;
-  }
-  
-  
-  //Book page Styles
-  
-  .title{
-    text-align:center;
-    width:100%;
-    padding:0em!important;
-    padding-top:2em;
-  }
-  .page{
-    padding:1em;
-    &.front{
-      border-radius:0em 1em 1em 0;
-    }
-    &.back{
-      border-radius:1em 0em 0em 1em;
-    }
-  }
-  
-  .leaf{
-    background-color:#0000!important;
-  }
-  
-  .pageNumber{
-    font-size:0.75em;
-    position:absolute;
-    bottom:0.5em;
-  }
-  .front .pageNumber{
-    right:0.75em;
-  }
-  .back .pageNumber{
-    left:0.75em;
-  }
-  .contents-row{
-    display:flex;
-    flex-flow:row nowrap;
-    .spacer{
-      flex:1 1;
-      height:1em;
-      border-bottom:1px dashed #000;
-    }
-    .text{
-      flex:0 0 auto;
-    }
-  }
-  h1,h2,h3{
-      font-size: max(18qw, 36px);  
-  }
-  
-  
-  
-  body[onload]{
-    /*Cheesing the preview*/
-    /*
-    transform:scale(1.5);
-    transform-origin:center top;
-    .leaf:nth-child(1){
-      transform:rotate3d(0, 1, 0, -128deg)!important;
-    }
-    .leaf:nth-child(2){
-      transform:rotate3d(0, 1, 0, -70deg)!important;
-    }
-    .leaf:nth-child(3){
-      transform:rotate3d(0, 1, 0, -40deg)!important;
-    }
-    div.leaf:nth-child(4) > div:nth-child(1){
-      background-color:#e76f51;
-    }
-  }
-  
-  .cd__intro{
-    background-color:#c0e;// Someone is using this on their website and i want to see how good their security is xd
-  }
-   */
-
-   /*rising water level overlay*/
   
   /*top progress bar*/
   .progress {
@@ -207,7 +86,7 @@
     display: flex;
     align-items:flex-end;
     justify-content: space-between;
-    column-gap: 2em;
+    column-gap: 1em;
     z-index:10;
     height: fit-content;
     background-color:var(--blue);
@@ -224,8 +103,7 @@
     font-size: 2vh;
   }
 
-
-  .upper,.lower{
+  .upper,.marquee{
     z-index: 3;
     background-color: white;
     height: 4vh;
@@ -234,19 +112,7 @@
     justify-content: flex-end;
     align-items:center;
   }
-  .lower p{
-    position:absolute;
-    right: -400px;
-    animation: run 8s alternate ;
-  }
-  @keyframes run{
-    0%{
-      transform: translateX(-100px);
-    }
-    100%{
-      transform: translateX(0px);
-    }
-  }
+  
 
 
   /*content*/
@@ -268,11 +134,11 @@
     font-size: 6vw;
     font-weight: 900;
     mix-blend-mode: overlay;
-    animation: down 3s ease-in ;
+    animation: down 3s ease-out ;
     animation-timeline: scroll(y);
   }
   
-  @media screen and (min-device-width: 960px)){
+  @media screen and (min-device-width: 960px){
     @keyframes down{
       0%{
         transform: translateY(1%);
@@ -306,7 +172,7 @@
     position: relative;
     z-index:1;
     width: 100vw;
-    height: 36vh;
+    aspect-ratio: 3 / 1;
     overflow-y: scroll;
     scrollbar-width: none;
   }
@@ -320,67 +186,22 @@
   }
   .block h2{
     font-size: max(3vh, 2.4vw);
+    padding: 0 4vw;
   }
-  .border{
-    z-index: 2;
-    position: absolute;
-    bottom: 2px;
-    right: 2px;
+  .ctx{
+    margin-bottom: 4vh;
+    height: fit-content;
+  }
+  .box2{
+    width: fit-content;
+    aspect-ratio: 3 / 1;
+    border: solid 1px var(--blue);
+    margin: 2vh;
+  }
+  .icon{
     width: 20%;
+    margin-right: 5%;;
   }
-  
-.shrink{
-  animation: shrink 3s linear ;
-  animation-timeline: scroll();
-}
-.penguin{
-  position: absolute;
-  width: 2vw;
-  right: 24px;
-  top: 0;
-}
-
-  .ice{
-    position: relative;
-    width: 10svh;
-    transform: scaleX(-1);
-    transform-origin: 40%;
-    float: right;
-    top: -1svh;
-  }
-  @keyframes shrink {
-    0%{
-      scale: 6;
-    }  
-    50%{
-      scale: 8;
-    }  
-    90%{
-      scale: 6;
-    }  
-    100%{
-      scale: 1;
-    }
-  }
-
-.left{
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 20vh;
-  width: fit-content;
-  z-index: -10;
-}
-.penguin2{
-  position: sticky;
-  bottom: 0;
-  right: 0;
-}
-.city{
-  animation: run 8s alternate ;
-  animation-timeline: scroll();
-}
-
 
 .water{
     z-index: 3;
@@ -406,8 +227,85 @@
       height: 90vh;
     }
   }
+ .shrink{
+    animation: shrink 3s linear ;
+    animation-timeline: scroll();
+  }
+  .penguin{
+    position: absolute;
+    width: 2vw;
+    right: 24px;
+    top: 0;
+  }
+  
+    .ice{
+      position: relative;
+      width: 10svh;
+      transform: scaleX(-1);
+      transform-origin: 40%;
+      float: right;
+      top: -1svh;
+    }
+    @keyframes shrink {
+      0%{
+        scale: 6;
+      }  
+      50%{
+        scale: 8;
+      }  
+      90%{
+        scale: 6;
+      }  
+      100%{
+        scale: 1;
+      }
+    }
+  
+  .left{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 20vh;
+    width: fit-content;
+    z-index: -10;
+  }
+  .penguin2{
+    position: sticky;
+    bottom: 0;
+    right: 0;
+  }
+  .city{
+    animation: run 8s alternate ;
+    animation-timeline: scroll();
+  }
+  
+  .dial{
+    opacity: 0;
+    animation: appear 3s 5s linear ;
+    animation-timeline: scroll();
+    width: min(70vw, 60vh);
+    aspect-ratio: 1 / 1;
+    position: absolute;
+    top: 30%;
+    left: 40%;
+  }
+  @keyframes appear {
+    0%{
+      opacity: 0;
+    } 
+    70%{
+      opacity: 0;
+    } 
+    100%{
+      opacity:1;
+    }
+  }
+  
 
-
+  .fixed{
+    position: fixed;
+  }
+  
 .draggable:hover{
     cursor: grab;
 }

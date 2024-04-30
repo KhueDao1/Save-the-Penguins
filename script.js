@@ -82,3 +82,55 @@ class FlipBook{
 }
 
 var flipBook = new FlipBook(document.getElementById("flipbook"));
+
+
+//dial rotate on drag
+const box1 = document.getElementById("box-1");
+
+const run = (box1) => {
+  let active = false;
+
+  //starting
+  box1.addEventListener("mousedown", e=> {
+    active = true;
+  });
+  // for stop dragging
+  document.addEventListener("mouseup", e=> {
+    active = false;
+  });
+  //run
+  box1.addEventListener("mousemove" , e=> {
+    //mouse position
+    let mX = e.clientX;
+    let mY = e.clientY;
+    // element data
+    let box1Data = box1.getBoundingClientRect();
+    let box1Width = box1Data.width;
+    let box1Height = box1Data.height;
+    let l = box1Data.left;
+    let t = box1Data.top;
+
+    //rotation
+    let rotate = 0;
+    let radians= 180/Math.PI;
+
+    let center = {
+      x: l + (box1Width/2),
+      y: t + (box1Height/2)
+    };
+    //arc Points
+    let x = mX - center.x;
+    let y = mY - center.y;
+    let angle = Math.floor(Math.atan2(y,x)*radians);
+    let startAngle = 120;
+
+    //active
+    if(active){
+      if(angle < 0 && angle > -180){
+        rotate = angle + startAngle;
+        box1.style.transform = 'rotate(${rotate}deg)';
+      }
+    }
+  });
+}
+run(box1, progressBar1);

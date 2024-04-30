@@ -1,0 +1,161 @@
+:root{
+    --bg: #00000 ;
+    --water: #0071bc;
+    --section: lightBlue;
+    --blue:midnightBlue;
+    --orange: rgb(255, 138, 96);
+    font-family: arial;
+  }
+  *{
+    box-sizing:border-box;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  a:hover{
+    cursor: alias;
+    color:var(--orange);
+    font-weight: 100;
+  }
+  img,video{
+    position: relative;
+    height:auto;
+    width:100%;
+    object-fit: cover;
+  }
+  body{
+    min-height:100vh;
+    margin:0;
+    max-height:100vh;
+    overflow:scroll;
+    scroll-behavior: smooth;
+    background-color:var(--bg);
+    display: grid;
+  }
+  body > section{
+    scroll-margin-top: 2vh;
+    scroll-snap-align: start;
+    scroll-snap-type: proximity;
+  }
+  /*top progress bar*/
+  .progress {
+    z-index: 10;
+    height: 1vh;
+    width: 0%;
+    background-color: var(--water);
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: progress linear;
+    animation-timeline: scroll(root y);
+  }
+  @keyframes progress {
+    to {
+      background-color: orangeRed;
+      width: 100%;
+    }
+  }
+  .logo{
+    z-index:3;
+    width: 12vw;
+    object-fit: cover;
+  }
+  .nav{
+    padding: 0 28px;
+    box-shadow:   var(--section) 0 2px 20px 2px;
+    position: -webkit-sticky;
+    position:sticky;
+    top:0;
+    display: flex;
+    align-items:flex-end;
+    justify-content: space-between;
+    column-gap: 1em;
+    z-index:10;
+    height: fit-content;
+    background-color:var(--blue);
+    font-size: max(1.6vw, 12px);
+    color: white;
+  }
+  .link{
+    display: flex;
+    column-gap: 2em;
+  }
+  .nav h2{
+    position: relative;
+    padding-top: 1.5vh;    
+    font-size: 2vh;
+  }
+
+  .upper,.marquee{
+    z-index: 3;
+    background-color: white;
+    height: 4vh;
+    color: var(--blue);
+    font-size: 16px;
+    justify-content: flex-end;
+    align-items:center;
+  }
+  
+
+
+  /*content*/
+  section{
+    width: 100vw;
+    height: fit-content;
+    background-color: var(--bg);
+    overflow-y:scroll;
+    overflow-x: hidden;
+    position: relative;
+    scrollbar-width: none;
+  }
+  h1{
+    padding: 0 4vw;
+    z-index: 5;
+    font-family: "montserrat", 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: min(8vh, 8vw);
+    color: var(--blue);
+    place-self: center;
+  }
+  p{
+    padding: 0 1vw;
+    font-size: min(3vw, 18px);
+    justify-self: start;
+  }
+  .block{
+    z-index:1;
+    text-wrap:pretty;
+    background-color: var(--orange);
+    color: var(--blue);
+    width: 100vw;
+    padding: 4vh;
+  }
+  .block h2{
+    font-size: max(3vh, 2.4vw);
+    padding: 0 4vw;
+  }
+  .data,.game, .ctx{
+    background-color: var(--section);
+    width:100vw;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;    
+    scrollbar-width: none;
+  }
+  .box{
+    position: relative;
+    z-index:1;
+    width: 100vw;
+    aspect-ratio: 3 / 1;
+    overflow-y: scroll;
+    scrollbar-width: none;
+  }
+  .draggable:hover{
+    cursor: grab;
+}
+
+
+  
