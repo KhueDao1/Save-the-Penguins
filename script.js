@@ -20,7 +20,6 @@ $( function () {
 
 $( function() {
   $( "#resizable" ).resizable({
-    animate: true,
-    containment: "#container"
+    containment: ".arrange"
   });
 } );

@@ -199,3 +199,12 @@
 .rotate{
   rotate: 0;
 }
+
+.penguin{
+  height: 20%;
+  width: fit-content;
+}
+.icon{
+  height: 10%;
+  width: fit-content;
+}
