@@ -55,16 +55,25 @@
 
   
   /*top progress bar*/
-  .progress {
-    z-index: 10;
+  #progress-container {
+    z-index: 14;
     height: 1vh;
-    width: 0%;
+    width: 100%;
     background-color: var(--water);
     position: fixed;
     top: 0;
     left: 0;
-    animation: progress linear;
-    animation-timeline: scroll(root y);
+  }
+  #progress {
+    z-index: 15;
+    height: 1vh;
+    width: 0%;
+    background-color: var(--orange);
+    position: fixed;
+    top: 0;
+    left: 0;
+    /*animation: progress linear;
+    animation-timeline: scroll(root y);*/
   }
   @keyframes progress {
     to {
@@ -139,10 +148,10 @@
     margin: 24px;
     z-index: 8;
     top: 0%;
-    color: var(--section);
+    color:var(--section);
     font-size: 6vw;
     font-weight: 900;
-    mix-blend-mode: overlay;
+    mix-blend-mode:screen;
     animation: down 3s ease-out ;
     animation-timeline: scroll(y);
   }
@@ -212,7 +221,18 @@
     margin-right: 5%;;
   }
 
-.water{
+  #water {
+    z-index: 3;
+    mix-blend-mode: multiply;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    height: 0;
+    background-color:var(--water);
+    background: linear-gradient(0deg, orangeRed 0%, rgb(138, 178, 231) 50%, #bdedf1 90%, white 100%);
+  }
+/* css animation timeline not compatible to safari and firefox
+.water{ 
     z-index: 3;
     mix-blend-mode: multiply;
     position: fixed;
@@ -223,11 +243,8 @@
     background: linear-gradient(0deg, orangeRed 0%, rgb(138, 178, 231) 50%,#bdedf1 90%, white 100%);
     animation: rise 3s 5s linear ;
     animation-timeline: scroll();
-    /*
-    offset starting point
-    scroll lib
-    */
-  }
+  
+  }*/
   @keyframes rise {
     0%{
       height: 0vh;
@@ -236,10 +253,7 @@
       height: 90vh;
     }
   }
- .shrink{
-    animation: shrink 3s linear ;
-    animation-timeline: scroll();
-  }
+
   .penguin{
     position: absolute;
     width: 2vw;
@@ -247,14 +261,21 @@
     top: 0;
   }
   
-    .ice{
-      position: relative;
-      width: 10svh;
-      transform: scaleX(-1);
-      transform-origin: 40%;
-      float: right;
-      top: -1svh;
-    }
+  .ice{
+    position: relative;
+    width: 10svh;
+    transform: scaleX(-1);
+    transform-origin: 40%;
+    float: right;
+    top: -1svh;
+  }
+
+
+ .shrink{
+    transition: 3ms;
+    /* animation: shrink 3s linear ;
+    animation-timeline: scroll(); */
+  }
     @keyframes shrink {
       0%{
         scale: 6;
@@ -283,21 +304,21 @@
     bottom: 0;
     right: 0;
   }
-  .city{
+  /* .city{
     animation: run 8s alternate ;
     animation-timeline: scroll();
+  } */
+  
+
+  .fixed{
+    position: fixed;
   }
   
-  .dial{
-    opacity: 0;
-    animation: appear 3s 5s linear ;
-    animation-timeline: scroll();
-    width: min(70vw, 60vh);
-    aspect-ratio: 1 / 1;
-    position: absolute;
-    top: 30%;
-    left: 40%;
-  }
+.draggable:hover{
+    cursor: grab;
+}
+
+
   @keyframes appear {
     0%{
       opacity: 0;
@@ -309,16 +330,6 @@
       opacity:1;
     }
   }
-  
-
-  .fixed{
-    position: fixed;
-  }
-  
-.draggable:hover{
-    cursor: grab;
-}
-
 button {
   position: absolute;
   bottom: 24px;
@@ -331,12 +342,12 @@ button {
   font-size: 3vh;
   width: fit-content;
   opacity: 0;
-  animation: appear 3s 5s linear ;
-  animation-timeline: scroll();
+  /* animation: appear 3s 5s linear ;
+  animation-timeline: scroll(); */
 }
 button:hover {
     background-color: white;
-    color: var(--orange);
+    color: var(--blue);
     font-weight: 800;
     border-radius: 2rem;
     border: 0;
