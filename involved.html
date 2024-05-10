@@ -7,7 +7,9 @@
         <link rel="favicon" type="image/png" href="resources/switch.svg">
     </head>
     <body>
-        <div class="progress"></div>
+        <div id="progress-container">
+            <div id="progress"></div>
+        </div>
         <section class="nav marquee">
             <marquee direction="left" scrollamount="7" style="font-size: max(2vh,12px);"> It is not too late to save the penguins ___Turn on Cold eco habit___Save the planet___COLD WASH with Tide for the better</marquee>
         </section>
@@ -27,27 +29,30 @@
         </section>
         <section class="hero">
             <h1>We must act now to save our Penguins' future</h1>
-            <img src="resources/martin-wettstein-HrLHBqrnefc-unsplash.jpg" >
+            <video src="resources/Makri27Pixabay.mp4"  controls allowfullscreen type="video/mp4"  style="aspect-ratio: 2/1;"></video>
             <h1 >Here are some eco-habit you can do for the better future</h1>
         </section>
         <section class="game turn ">
             <div class="light click1"></div>
-            <h1 >turn off lights</h1>
+            <h1 >Click to turn off lights</h1>
         </section>
         <section class="game" >
             <div class="dial click2"> 
                 <img src="resources/switch1.svg">
             </div>
-            <h1 class="click2">dial to cold wash</h1>
+            <h1 class="click2">Click to dial to cold wash</h1>
         </section>
 
         <section class="block">
+            <img src="resources/dialTide.png" >
+        </section>
+        <section class="block">
             <img src="resources/board.png" >
         </section>
-    >
+    
 
         <section class="arrange">
-            <h1 class="draggable" style="right:0; top: 12%; height: fit-content;" >Thank you</h1>
+            <h1 class="draggable icon" style="right:0; top: 0%; height: fit-content;" >Thank you</h1>
             <img class="draggable" style="left:0" src="resources/city5.svg">
             <img class="draggable" style="right:0" src="resources/city4.svg">
             <img class="draggable penguin"  style="right:0; bottom: 22%;z-index: 10;"src="resources/pen3.svg">
@@ -63,6 +68,6 @@
          <script src="jquery-3.7.1.min.js"></script>
          <!-- due to dependency script rely on ui rely on jquery-->
          <script src="jquery-ui.min.js"></script>
-         <script src="script.js"></script>
+         <script src="involved.js"></script>
     </body>
 </html>

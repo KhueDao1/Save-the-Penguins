@@ -24,7 +24,6 @@ window.addEventListener('scroll', () => {
   water.style.height = `${easedScrollPercentage * maxHeight}px`;
 
   document.getElementById("progress").style.width = `${scrollPercentage * 100}` + "%";
-  shrink.style.scale = 8 - 6*(scrollPercentage) ;
   
   if (scrollPercentage <= 0.7) {
     button.style.opacity = 0;
@@ -33,27 +32,15 @@ window.addEventListener('scroll', () => {
   } else {
     button.style.opacity = 1;
   }
+
+  if (scrollPercentage <= 0.5) {
+    shrink.style.scale = 6;
+  } else if (scrollPercentage > 0.5 && scrollPercentage <= 1) {
+    shrink.style.scale = 6 +(easedScrollPercentage *2) ;
+  } else {
+    shrink.style.scale = 1;
+  }
 }, false);
 
 
-
-
-$(".click1").click(function(){
-  $(".light").toggleClass("dark");
-  $(".turn").toggleClass("dark");
-});
-$(".click2").click(function(){
-  $(".dial").toggleClass("rotate");
-});
-
-$( function () {
-  $(".draggable").draggable({ snap:true});
-  $(".draggable").draggable({ containment:"parent"});
-});
-
-$( function() {
-  $( "#resizable" ).resizable({
-    containment: ".arrange"
-  });
-} );
 
